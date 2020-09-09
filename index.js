@@ -5,7 +5,7 @@ const Datastore = require('nedb');
 const fetch = require('node-fetch');
 require('dotenv').config()
 
-const port = process.env.PORT
+const port = process.env.PORT 
 app.listen(port, () => console.log(`listening at ${port}`));
 app.use(express.static('public'));
 app.use(express.json({limit: '1mb'}))

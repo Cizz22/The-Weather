@@ -50,8 +50,8 @@ navigator.geolocation.getCurrentPosition(async position => {
     // document.getElementById('udara_value').textContent = aq.value;
     // document.getElementById('udara_unit').textContent = aq.unit;
     // document.getElementById('udara_date').textContent = aq.lastUpdated;
-
-    const popup = `Cuaca di wilayah ini ${weather} dengan suhu ${temp} derajat Celcius`;
+    const dt = new Date(cuaca.current.dt).toLocaleString();
+    const popup = `Cuaca hari ini adalah ${weather} dengan suhu ${temp}&deg;C`;
     const marker = L.marker([lat, lon]).addTo(map);
     marker.bindPopup(popup).openPopup();
     air = udara.results[0].measurements[0];
